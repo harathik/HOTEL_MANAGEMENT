@@ -1,0 +1,42 @@
+<div class="bg">
+
+  <div class="Container  loginform">
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-9 flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+        <div class="card-body">
+          <h4 class="title text-center mt-4">
+            Login
+          </h4>
+          <div class="alert alert-danger" *ngIf="isLoginFailed">
+            Signin failed!<br />{{ error }}
+          </div>
+          <form class="form-box px-3" form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-input">
+              <span></span>
+              <input type="email" name="" placeholder="User Name" tabindex="10" required formControlName="username">
+            </div>
+            <div class="form-input">
+              <span></span>
+              <input type="password" name="" placeholder="Password" formControlName="password" required>
+            </div>
+
+            <div class="mb-3">
+              <button type="submit" [disabled]="!loginForm.valid" class="btn btn-block text-uppercase">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Login
+              </button>
+            </div>
+
+            <div class="text-center mb-2">
+              Don't have an account?
+              <button class="btn btn-link" routerLink="/signup" style="color: rgb(6, 230, 107)">
+                click here
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

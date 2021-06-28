@@ -1,0 +1,21 @@
+H1,h3,h6 {
+  color: rgb(253, 253, 253)
+}
+
+   .navbar{
+     height :20%;
+     line-height: 10%;
+  } 
+
+  #navbar{
+    background-color: rgb(113, 184, 243);
+  }
+
+  .text-center {
+    
+    width: 1200px;
+            margin: 0 auto;
+  }
+  .btn-link {
+    color: rgb(0, 0, 0)
+}

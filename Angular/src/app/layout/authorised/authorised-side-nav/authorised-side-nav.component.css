@@ -1,0 +1,57 @@
+:host {
+    background: rgb(38, 38, 38);
+}
+
+#sidebar {
+    min-width: 200px;
+    max-width: 200px;
+    height: 100% !important;
+    height: auto;
+    color: rgb(0, 0, 0);
+    background-color: rgb(235, 235, 235);
+    transition: all 0.3s;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#sidebar.hidden {
+    margin-left: -200px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+@media (max-width: 575px) {
+    #sidebar {
+        margin-left: -200px;
+    }
+    #sidebar.hidden {
+        margin-left: 0;
+    }
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+}
+
+#sidebar ul li a {
+    padding: 15px;
+    display: block;
+    width: 100%;
+    color: rgb(61, 83, 141)
+}
+
+
+
+hr {
+    border-top: 1px solid rgb(17, 146, 197);
+    margin-top: 0;
+}

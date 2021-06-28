@@ -1,0 +1,77 @@
+<div class="bg">
+  <div class="Container signupfrom">
+    <div class="row px-3">
+      <div class="col-lg-5 col-xl-5 flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+
+        <div class="card-body">
+          <h4 class="title text-center mt-4">Signup Page</h4>
+          <div class="alert alert-danger" *ngIf="isSignUpFailed">
+            Signup failed!<br />{{ errorMessage }} or give correct credentials
+          </div>
+          <div class="alert alert-success" *ngIf="isSuccessful">
+            Your registration is successfull!
+          </div>
+          <form
+            class="form-box px-3"
+            [formGroup]="signUpForm"
+            (ngSubmit)="signupUser()"
+          >
+            <div class="form-input">
+              <span
+                ></span>
+              <input
+                type="text"
+                name="empid"
+                placeholder="Employee ID"
+                formControlName="empId"
+                tabindex="10"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <span> </span>
+              <input
+                type="text"
+                name="UserId"
+                formControlName="userName"
+                placeholder="User Name or Email"
+                tabindex="10"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <span></span>
+              <input
+                type="password"
+                name="password"
+                formControlName="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <span></span>
+              <select formControlName="role">
+                <option [ngValue]=null>Select Role</option>
+                <option *ngFor="let role of roles" [ngValue]= "role">{{role}}</option>
+                
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <button type="submit" class="btn btn-block text-uppercase">
+                Create An Account
+              </button>
+            </div>
+            <div class="text-center mb-2">
+              Already Have an account?
+              <button class="btn btn-link" (click)="login()" style="color: rgb(6, 230, 107)" >LOGIN</button>
+            </div>
+           
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

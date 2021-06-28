@@ -1,0 +1,20 @@
+export interface Reservation {
+    id?:string,
+    roomNo: string,
+    category: string,
+    capacity:number,
+    price:number,
+    checkin: Date,
+    checkout : Date,
+    name: string,
+    email:string,
+    contactNo: number,
+    company: string,
+    city: string,
+    spoc:string,
+    addressProof: string,
+    proofId: string,
+    paymentType: string,
+    paymentStatus:string,
+    status: string
+}

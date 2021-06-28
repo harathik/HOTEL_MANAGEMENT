@@ -1,0 +1,30 @@
+<div  class="card">
+    <div class="card-header">
+        {{category ? 'Edit Room' : 'ADD NEW CATEGORY'}}
+    </div>
+    <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="submit()">
+            <div class="form-row">
+
+
+    
+                <div class="form-group col">
+                    <label for="name"> ROOM TYPE :
+                        <input type="text" id="name" formControlName="name">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-row d-flex flex-row-reverse">
+                <button class="btn btn-primary m-1" type="submit" [disabled]="!editForm.valid">
+                    {{category ? 'Update' : 'Add '}}
+                </button>
+                <button class="btn btn-danger m-1" type="reset" (click)="reset()">Reset</button>
+                <button class="btn btn-secondary m-1" type="reset" (click)="cancel()">
+                    Cancel
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
